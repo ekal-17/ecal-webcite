@@ -1,0 +1,233 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); /* pastel ungu - pink */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hati super besar di kiri */
+.heart-big {
+    position: absolute;
+    left: 10%;              /* geser sedikit ke kanan supaya lebih dekat */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80vmin;         /* ukuran tetap */
+    height: 80vmin;
+    fill: #fa3553;
+    stroke: #fa3553;
+    opacity: 0.3;          /* tetap jelas */
+    animation: bigBeat 3s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Animasi detak hati */
+@keyframes bigBeat {
+    0%, 100% {
+        transform: translateY(-50%) scale(1);
+        opacity: 0.25;
+    }
+    50% {
+        transform: translateY(-50%) scale(1.1);
+        opacity: 0.35;
+    }
+}
+
+/* Kotak konten dekat logo */
+body {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); /* pastel ungu - pink */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hati super besar di kiri */
+.heart-big {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80vmin;
+    height: 80vmin;
+    fill: #2079ff;         /* pink kemerahan */
+    stroke: #2079ff;
+    opacity: 0.25;         /* lebih lembut */
+    animation: bigBeat 3s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Kotak konten dekat logo */
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 28px rgba(161, 140, 209, 0.35); /* bayangan ungu pastel */
+    max-width: 420px;
+    width: 100%;
+    z-index: 10;
+    position: relative;
+    margin-right: 20%;
+}
+
+/* Bintang jatuh */
+.star {
+    position: absolute;
+    top: -20px;
+    color: #ffffff;           /* putih */
+    font-size: 14px;
+    opacity: 0.9;
+    text-shadow: 0 0 6px #a18cd1, 0 0 12px #fbc2eb; /* glow biru-ungu */
+    animation: fall linear forwards;
+}
+ 
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #1e2ad8;
+    text-shadow: 1px 1px 3px #ffb6c1;
+}
+
+.sweet-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 25px;
+    color: #1e2ad8;
+}
+
+.btn {
+    background: #1e2ad8;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.5);
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background: #1e2ad8;
+    transform: scale(1.05);
+}
+
+/* Bintang jatuh */
+.star {
+    position: absolute;
+    top: -20px;
+    color: #ffffff;           /* putih */
+    font-size: 14px;
+    opacity: 0.9;
+    text-shadow: 0 0 6px #a18cd1, 0 0 12px #fbc2eb; /* glow biru-ungu */
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.flowers-side span {
+    position: absolute;
+    top: -20px; /* mulai sedikit di atas */
+    right: -50px; /* mulai dari sisi kanan */
+    font-size: 28px;
+    animation: flowerSideFall linear infinite;
+    opacity: 0.9;
+    pointer-events: none;
+}
+
+/* variasi posisi dan kecepatan */
+.flowers-side span:nth-child(1) { top: 5%; animation-duration: 8s; font-size: 24px; }
+.flowers-side span:nth-child(2) { top: 15%; animation-duration: 10s; font-size: 30px; }
+.flowers-side span:nth-child(3) { top: 25%; animation-duration: 12s; font-size: 26px; }
+.flowers-side span:nth-child(4) { top: 35%; animation-duration: 9s;  font-size: 32px; }
+.flowers-side span:nth-child(5) { top: 45%; animation-duration: 11s; font-size: 22px; }
+.flowers-side span:nth-child(6) { top: 55%; animation-duration: 13s; font-size: 28px; }
+.flowers-side span:nth-child(7) { top: 65%; animation-duration: 15s; font-size: 34px; }
+
+@keyframes flowerSideFall {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-40vw, 50vh) rotate(180deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-80vw, 110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.arabesque-flowers {
+    position: absolute;
+    top: 10px;  /* sejajar dengan ornamen arabesque */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px; /* jarak kiri-kanan */
+    z-index: 25;
+    pointer-events: none;
+}
+
+.marquee {
+    position: absolute;
+    top: 20px;          /* jarak dari atas */
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 12px 20px;
+    width: 80%;
+    max-width: 900px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 100;       /* supaya di depan wave & heart */
+  }
+  
+  .marquee-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 60s linear infinite;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4b0082; /* ungu */
+    text-shadow: 1px 1px 2px #fff;
+  }
+  
+  @keyframes scrollText {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
